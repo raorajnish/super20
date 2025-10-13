@@ -1,0 +1,33 @@
+{% extends 'admissions/base.html' %}
+{% load static %}
+
+{% block title %}Faculty Login - Super20 Academy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-chalkboard-teacher me-2"></i>Faculty Login</h5>
+                </div>
+                <div class="card-body">
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <div class="d-grid mt-3">
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-sign-in-alt me-2"></i>Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <a class="btn btn-link" href="{% url 'admin_login' %}"><i class="fas fa-user-shield me-1"></i>Admin Login</a>
+    </div>
+    
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,75 @@
+{% extends 'admissions/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Admin Login - Super20 Academy{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-dark text-white">
+                    <h3 class="mb-0">
+                        <i class="fas fa-user-shield me-2"></i>Admin Login
+                    </h3>
+                </div>
+                <div class="card-body p-4">
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        This area is restricted to authorized personnel only.
+                    </div>
+                    
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            {{ form.username|as_crispy_field }}
+                        </div>
+                        
+                        <div class="mb-4">
+                            {{ form.password|as_crispy_field }}
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-sign-in-alt me-2"></i>Login
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="text-center">
+                        <a href="{% url 'home' %}" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left me-2"></i>Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Security Notice -->
+            <div class="card mt-4 shadow-sm">
+                <div class="card-body">
+                    <h6 class="card-title">
+                        <i class="fas fa-shield-alt text-primary me-2"></i>Security Notice
+                    </h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-1">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Keep your credentials secure
+                        </li>
+                        <li class="mb-1">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Log out when finished
+                        </li>
+                        <li class="mb-1">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Don't share your password
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

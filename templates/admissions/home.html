@@ -1,0 +1,240 @@
+{% extends 'admissions/base.html' %}
+{% load static %}
+
+{% block title %}Super20 Academy - Home{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    Welcome to Super20 Academy
+                </h1>
+                <p class="lead mb-4">
+                    Empowering students with quality education and comprehensive learning programs 
+                    from Kindergarten to 12th standard. Join us in building a brighter future.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{% url 'enquiry_form' %}" class="btn btn-light btn-lg shadow-sm hover-lift" onclick="console.log('Enquiry button clicked'); return true;" style="cursor: pointer; text-decoration: none; display: inline-block;">
+                        <i class="fas fa-edit me-2"></i>Enquiry Form
+                    </a>
+                    <a href="{% url 'admission_form' %}" class="btn btn-outline-light btn-lg shadow-sm hover-lift" onclick="console.log('Admission button clicked'); return true;" style="cursor: pointer; text-decoration: none; display: inline-block;">
+                        <i class="fas fa-check me-2"></i>Admission Form
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="{% static 'images/Super20logo.png' %}" 
+                     alt="Super20 Academy" class="img-fluid rounded hero-logo">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="mb-4">
+                    <i class="fas fa-bullseye text-primary me-3"></i>Our Mission
+                </h2>
+                <p class="lead">
+                    To provide comprehensive, quality education that nurtures intellectual growth, 
+                    character development, and prepares students for success in an ever-changing world.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Courses Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">
+            <i class="fas fa-book text-primary me-3"></i>Courses We Offer
+        </h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-child text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Kindergarten</h5>
+                        <p class="card-text">Jr. KG and Sr. KG programs designed to develop foundational skills.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-school text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Primary Education</h5>
+                        <p class="card-text">Comprehensive education from 1st to 5th standard with modern teaching methods.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-graduation-cap text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Secondary Education</h5>
+                        <p class="card-text">6th to 10th standard with focus on academic excellence and skill development.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-flask text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Science Stream</h5>
+                        <p class="card-text">11th and 12th standard Science with Physics, Chemistry, and Biology.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-calculator text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Commerce Stream</h5>
+                        <p class="card-text">11th and 12th standard Commerce with Business Studies and Economics.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="fas fa-palette text-primary fa-3x mb-3"></i>
+                        <h5 class="card-title">Arts Stream</h5>
+                        <p class="card-text">11th and 12th standard Arts with Literature, History, and Geography.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">
+            <i class="fas fa-quote-left text-primary me-3"></i>What Parents Say
+        </h2>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                        </div>
+                        <p class="card-text">
+                            "Super20 Academy has transformed my child's learning experience. 
+                            The teachers are dedicated and the curriculum is excellent."
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Priya Sharma</h6>
+                                <small class="text-muted">Parent of Class 8 Student</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                        </div>
+                        <p class="card-text">
+                            "The academic support and individual attention my daughter receives 
+                            here is outstanding. Highly recommended!"
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Rajesh Kumar</h6>
+                                <small class="text-muted">Parent of Class 10 Student</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                            <i class="fas fa-star text-warning me-1"></i>
+                        </div>
+                        <p class="card-text">
+                            "The school's focus on both academics and character development 
+                            has helped my son grow into a confident individual."
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0">Meera Patel</h6>
+                                <small class="text-muted">Parent of Class 12 Student</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="mb-4">Ready to Join Super20 Academy?</h2>
+        <p class="lead mb-4">
+            Take the first step towards your child's bright future. 
+            Contact us today for more information or apply for admission.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="{% url 'enquiry_form' %}" class="btn btn-light btn-lg shadow-sm hover-lift" onclick="console.log('Submit Enquiry button clicked')" style="cursor: pointer; text-decoration: none;">
+                <i class="fas fa-edit me-2"></i>Submit Enquiry
+            </a>
+            <a href="{% url 'admission_form' %}" class="btn btn-outline-light btn-lg shadow-sm hover-lift" onclick="console.log('Apply for Admission button clicked')" style="cursor: pointer; text-decoration: none;">
+                <i class="fas fa-check me-2"></i>Apply for Admission
+            </a>
+            <a href="{% url 'contact' %}" class="btn btn-outline-light btn-lg shadow-sm hover-lift" onclick="console.log('Contact Us button clicked')" style="cursor: pointer; text-decoration: none;">
+                <i class="fas fa-phone me-2"></i>Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Debug Section (remove in production) -->
+{% if debug %}
+<div class="container mt-4">
+    <div class="alert alert-info">
+        <h5>Debug Information:</h5>
+        <p><strong>Enquiry Form URL:</strong> {% url 'enquiry_form' %}</p>
+        <p><strong>Admission Form URL:</strong> {% url 'admission_form' %}</p>
+        <p><strong>Current URL:</strong> {{ request.path }}</p>
+    </div>
+</div>
+{% endif %}
+{% endblock %} 

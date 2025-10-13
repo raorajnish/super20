@@ -1,0 +1,72 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env
+.venv/
+env/
+
+# Django
+*.log
+*.pot
+*.py,cover
+local_settings.py
+
+# Databases
+/db.sqlite3
+*.sqlite3
+
+# Media: ignore by default but keep a specific promo image
+/media/**
+!/media/photos/
+!/media/photos/Blue_and_White_Modern_College_Admission_Instagram_Post.png
+# Re-ignore everything else in photos except the promo image
+/media/photos/**
+!/media/photos/Blue_and_White_Modern_College_Admission_Instagram_Post.png
+
+# Static collection outputs (keep source `static/` in repo)
+/staticfiles/
+/static_collected/
+
+# Test & coverage
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.pytest_cache/
+.junit/
+
+# Type checkers & linters
+.mypy_cache/
+ruff_cache/
+.pyre/
+.pytype/
+
+# Editors & IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Office/OneDrive temp files
+~$*
+*.tmp
+
+# Node (if ever used)
+node_modules/
+
+# Compiled translations
+*.mo
+
+# Logs and dumps
+*.pid
+*.seed
+*.out
+*.err
