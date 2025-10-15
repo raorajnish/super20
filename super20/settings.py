@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-h7-%n^%$#42$lqb2+k%$_2-7(*zp-n^t!vlab!whev5o9e*tw(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'super20-gsua.onrender.com',
+]
+
+# CSRF settings for production
+CSRF_TRUSTED_ORIGINS = [
+    'https://super20-gsua.onrender.com',
+]
 
 
 # Application definition
